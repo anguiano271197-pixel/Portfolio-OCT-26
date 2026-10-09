@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edgar Anguiano Rangel · Portafolio</title>
+  <meta name="description" content="Portafolio profesional de Edgar Anguiano Rangel: innovación educativa, diseño instruccional y programas académicos internacionales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css?v=6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22%231f5f55%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22Georgia%22 font-size=%2214%22 fill=%22white%22 text-anchor=%22middle%22%3EEA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="saltar" href="#inicio" data-t>Saltar al contenido</a>
+
+  <header class="barra" id="barra">
+    <div class="contenedor barra__fila">
+      <a href="#inicio" class="marca" id="marca"></a>
+      <nav class="menu" id="menu" aria-label="Principal" data-t-aria>
+        <a href="#sobre-mi" data-t>Sobre mí</a>
+        <a href="#trabajos" data-t>Trabajos</a>
+        <a href="#credenciales" data-t>Certificaciones</a>
+        <a href="#experiencia" data-t>Experiencia</a>
+        <a href="#contacto" class="menu__cta" data-t>Contacto</a>
+      </nav>
+      <div class="barra__acciones">
+        <button class="idioma-btn" id="idioma" type="button"></button>
+        <button class="icono-btn" id="tema" aria-label="Cambiar tema claro/oscuro" data-t-aria></button>
+        <button class="icono-btn menu-toggle" id="menuToggle" aria-label="Abrir menú" data-t-aria aria-expanded="false" aria-controls="menu"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="contenedor hero__grid">
+        <div class="hero__texto revelar">
+          <p class="etiqueta-disp" id="disponibilidad"></p>
+          <h1 class="hero__nombre" id="nombre"></h1>
+          <p class="hero__titulo" id="titulo"></p>
+          <ul class="hero__roles" id="roles"></ul>
+          <div class="hero__acciones" id="accionesHero"></div>
+        </div>
+        <figure class="hero__retrato revelar" id="retrato"></figure>
+      </div>
+      <div class="contenedor">
+        <dl class="cifras revelar" id="cifras"></dl>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="seccion" id="sobre-mi">
+      <div class="contenedor sobre">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">01</span>
+          <h2 data-t>Sobre mí</h2>
+        </header>
+        <div class="sobre__cuerpo revelar">
+          <p class="sobre__resumen" id="resumen"></p>
+          <div class="sobre__cols">
+            <div>
+              <h3 class="mini-titulo" data-t>Especialidades</h3>
+              <ul class="chips" id="especialidades"></ul>
+            </div>
+            <div>
+              <h3 class="mini-titulo" data-t>Idiomas</h3>
+              <ul class="idiomas" id="idiomas"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRABAJOS -->
+    <section class="seccion seccion--alt" id="trabajos">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">02</span>
+          <h2 data-t>Trabajos y proyectos</h2>
+          <p class="seccion__intro" data-t>Una selección de proyectos curriculares, programas y recursos educativos.</p>
+        </header>
+        <div class="filtros" id="filtrosTrabajos" role="group" aria-label="Filtrar trabajos" data-t-aria></div>
+        <div class="tarjetas" id="listaTrabajos"></div>
+      </div>
+    </section>
+
+    <!-- DESTINOS -->
+    <section class="seccion" id="destinos">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">03</span>
+          <h2 data-t>Programas internacionales</h2>
+          <p class="seccion__intro" data-t>Destinos y aliados académicos de los programas que he coordinado.</p>
+        </header>
+        <ol class="destinos" id="listaDestinos"></ol>
+      </div>
+    </section>
+
+    <!-- CREDENCIALES -->
+    <section class="seccion seccion--alt" id="credenciales">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">04</span>
+          <h2 data-t>Formación, certificaciones y cursos</h2>
+        </header>
+
+        <div class="formacion revelar" id="listaFormacion"></div>
+
+        <div class="credenciales__barra">
+          <div class="filtros" id="filtrosCred" role="group" aria-label="Filtrar credenciales" data-t-aria></div>
+          <label class="buscador">
+            <span class="sr" data-t>Buscar</span>
+            <input type="search" id="buscarCred" data-t-ph placeholder="Buscar curso o institución…">
+          </label>
+        </div>
+        <ul class="credenciales" id="listaCred"></ul>
+        <p class="vacio" id="credVacio" hidden data-t>No hay resultados para esa búsqueda.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="seccion" id="experiencia">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">05</span>
+          <h2 data-t>Experiencia</h2>
+        </header>
+        <ol class="linea" id="listaExperiencia"></ol>
+      </div>
+    </section>
+
+    <!-- PUBLICACIONES -->
+    <section class="seccion seccion--alt" id="publicaciones">
+      <div class="contenedor">
+        <header class="seccion__cab revelar">
+          <span class="seccion__num">06</span>
+          <h2 data-t>Publicaciones</h2>
+        </header>
+        <ul class="publicaciones" id="listaPublicaciones"></ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="contenedor contacto__caja revelar">
+        <p class="contacto__pre" data-t>¿Construimos algo juntos?</p>
+        <h2 class="contacto__titulo" data-t>Hablemos de educación, proyectos y nuevas oportunidades.</h2>
+        <div class="contacto__acciones" id="accionesContacto"></div>
+        <ul class="redes" id="redes"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <span id="pieNombre"></span>
+      <a href="#inicio" data-t>Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Panel de evidencias de cada proyecto -->
+  <dialog class="panel-ev" id="evidencias" aria-labelledby="evTitulo">
+    <div class="panel-ev__cab">
+      <div>
+        <p class="panel-ev__meta" id="evMeta"></p>
+        <h3 id="evTitulo"></h3>
+      </div>
+      <button class="icono-btn" id="evCerrar" aria-label="Cerrar" data-t-aria>✕</button>
+    </div>
+    <div class="panel-ev__cuerpo" id="evLista"></div>
+    <p class="panel-ev__pie" data-t>Cada documento se abre en una pestaña nueva.</p>
+  </dialog>
+
+  <!-- Visor de certificados -->
+  <dialog class="visor" id="visor">
+    <div class="visor__cab">
+      <strong id="visorTitulo"></strong>
+      <div>
+        <a id="visorAbrir" class="enlace" target="_blank" rel="noopener" data-t>Abrir en pestaña nueva</a>
+        <button class="icono-btn" id="visorCerrar" aria-label="Cerrar" data-t-aria>✕</button>
+      </div>
+    </div>
+    <div class="visor__cuerpo" id="visorCuerpo"></div>
+  </dialog>
+
+  <script src="js/datos.js?v=6"></script>
+  <script src="js/traducciones-en.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
+</body>
+</html>
